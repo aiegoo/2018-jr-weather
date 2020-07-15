@@ -3,7 +3,7 @@ $.ajax({
 	url: "https://api.openweathermap.org/data/2.5/weather",
 	dataType: "json",
 	data: {
-		id: "1846266",
+		id: "1835848",
 		appid: "02efdd64bdc14b279bc91d9247db4722",
 		units: "metric"
 	},
@@ -18,6 +18,7 @@ $.ajax({
 		현재날씨:${data.weather[0].main} / ${data.weather[0].description}</div>
 		<div class="w3-padding">현재바람:${data.wind.speed} / ${data.wind.deg}deg</div>
 		<div class="w3-padding">현재도시:${data.name}</div>
+		<div class="w3-padding">기압: ${data.main.feels_like}</div>
 		`;
 		$("#status").append(html);
 	},
